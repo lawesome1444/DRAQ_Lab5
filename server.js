@@ -63,6 +63,11 @@ app.get('/api/books', (req, res) => {
     res.sendFile(__dirname + '/index.html');
   })
 
+  //Routed from /test with fname and lname data
+  app.get('/name', (req, res) => {
+    res.send("Hello "+req.query.fname+" "+req.query.lname);
+  })
+
 //The server will constantly listen for HTTP requests
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

@@ -3,24 +3,29 @@
 <head>
 <title>Test</title>
 </head>
-<body>
+    <body>
 
-<h1>Welcome to Test</h1>
-<p>This is a test.</p>
+    <h1>Welcome to Test</h1>
+    <p>This is a test.</p>
 
-<h3>GET METHOD</h3>
-<form>
-    <label>Firstname:</label>
-        <input
-        type="text"
-        name="fanme"
-        value="Conor"/>
+    <h3>GET METHOD</h3>
+    <form action="/name" method="GET">
+        <label>Firstname:</label>
+            <input
+            type="text"
+            name="fname"
+            value="Conor"/>
+            <br/>
         <label>Lastname:</label>
+            <input
+            type="text"
+            name="lname"
+            value="O'Driscoll"/>
+            <br/>
         <input
-        type="text"
-        name="lname"
-        value="O'Driscoll"/>
-</form>
+        type="submit" value="submit"
+        />
+    </form>
 
-</body>
+    </body>
 </html>

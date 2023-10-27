@@ -50,8 +50,9 @@ app.get('/api/books', (req, res) => {
         "categories": []
         }
         ];
-    res.json({
-        myBooks:data
+    res.status(200).json({
+        myBooks:data,
+        "message":"Hello from the API"
     });
   })
 

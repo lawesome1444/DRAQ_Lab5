@@ -56,6 +56,10 @@ app.get('/api/books', (req, res) => {
     });
   })
 
+  app.get('/test', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+  })
+
 //The server will constantly listen for HTTP requests
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

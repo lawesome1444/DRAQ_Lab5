@@ -7,6 +7,9 @@ app.get('/', (req, res) => {
   res.send('Welcome to Data Representation & Querying')
 })
 
+app.get('/hello', (req, res) => {
+    res.send('Hello ')
+  })
 
 //The server will constantly listen for HTTP requests
 app.listen(port, () => {

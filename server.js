@@ -4,8 +4,9 @@ const port = 4000
 
 //Waiting for a HTTP request with a get
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Welcome to Data Representation & Querying')
 })
+
 
 //The server will constantly listen for HTTP requests
 app.listen(port, () => {

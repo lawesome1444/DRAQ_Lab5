@@ -56,7 +56,10 @@ app.get('/api/books', (req, res) => {
     });
   })
 
+  //Listen for localhost:4000/test
   app.get('/test', (req, res) => {
+    //Go to the same file directory as server.js and open index.html
+    //(They are in the same folder so this is works)
     res.sendFile(__dirname + '/index.html');
   })
 

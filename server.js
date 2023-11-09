@@ -1,11 +1,18 @@
 const express = require('express')
 const app = express()
 const port = 3000
+//Error handling
+const path = require('path');
+//Importing body parser
+const bodyParser = require("body-parser");
 
 //Waiting for a HTTP request with a get
 app.get('/', (req, res) => {
   res.send('Welcome to Data Representation & Querying')
 })
+
+//Configuring Body-Parser as middleware for name request
+
 
 app.get('/hello/:name', (req, res) => {
     console.log(req.params.name);
@@ -67,6 +74,19 @@ app.get('/api/books', (req, res) => {
   app.get('/name', (req, res) => {
     res.send("Hello "+req.query.fname+" "+req.query.lname);
   })
+
+  //Configuring Body-Parser to be used as middleware
+  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(bodyParser.json());
+
+  // This is an Express route for handling a POST request to the '/name' endpoint
+  app.post('/name', (req, res) => {
+    console.log("post method");
+    console.log(req.body.firstname);
+     // Send a response back to the client with fname and lname
+    res.send('Hello ' + req.body.firstname + " " + req.body.lastname);
+  })
+
 
 //The server will constantly listen for HTTP requests
 app.listen(port, () => {

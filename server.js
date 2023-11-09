@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 4000
+const port = 3000
 
 //Waiting for a HTTP request with a get
 app.get('/', (req, res) => {
